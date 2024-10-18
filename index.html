@@ -22,21 +22,8 @@
         rel="stylesheet" />
 
     <!-- Style Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/css/tw-elements.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                
-            },
-            corePlugins: {
-                // preflight: false,
-            },
-        };
-    </script>
-
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="asset/css/output.css">
     <link rel="stylesheet" href="asset/css/style.css" />
 
     <!-- Favicon -->
@@ -178,7 +165,6 @@
             </div>
             <hr class="container w-full bg-amber-400 border-0 h-0.5 rounded-full">
             <div class="container flex w-full items-center justify-between py-2 px-3 lg:py-4">
-
                 <div class="flex items-center">
                     <!-- Logo -->
                     <a class="flex items-center text-neutral-900 dark:text-neutral-200 me-2" href="#">
@@ -222,7 +208,7 @@
                             <span class="text-amber-400 font-bold text-2xl mx-1.5">|</span>
                         </li>
                         <li class="mb-4 lg:mb-0 lg:pe-2 flex items-center">
-                            <a class="text-white hover:text-amber-400 transition-colors duration-300 ease-in" href="#">قائمة الطعام</a>
+                            <a class="text-white hover:text-amber-400 transition-colors duration-300 ease-in" href="#products">قائمة الطعام</a>
                             <span class="text-amber-400 font-bold text-2xl mx-1.5">|</span>
                         </li>
                         <li class="mb-4 lg:mb-0 lg:pe-2 flex items-center">
@@ -247,7 +233,6 @@
                             <i class="fa-regular fa-heart"></i>
                         </span>
                     </a>
-
                     <!-- bell dropdown container -->
                     <div class="relative" data-twe-dropdown-ref data-twe-dropdown-alignment="end">
                         <a class="me-4 flex items-center  hover:text-amber-500 transition-colors duration-300 ease-in" href="#"
@@ -277,28 +262,13 @@
                     
                     <!-- cart dropdown container -->
                     <div class="relative" data-twe-dropdown-ref data-twe-dropdown-alignment="end">
-                        <a class="me-4 flex items-center  hover:text-amber-500 transition-colors duration-300 ease-in" href="#"
-                                id="dropdownMenuButton1" role="button" data-twe-dropdown-toggle-ref aria-expanded="false">
+
+                        <button class="me-4 flex items-center  hover:text-amber-500 transition-colors duration-300 ease-in" id="openCart" data-twe-toggle="modal" data-twe-target="#cart" data-twe-ripple-init data-twe-ripple-color="light">
                             <span class="absolute -mt-4 me-2.5 rounded-full bg-rose-500 px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white top-2 -right-2.5">1</span>
                             <span class="w-5">
                                 <i class="fa-solid fa-cart-shopping"></i>
                             </span>
-                        </a>
-                        <ul class="absolute z-[1000] hidden min-w-max list-none overflow-hidden rounded-lg bg-white shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
-                            aria-labelledby="dropdownMenuButton1" data-twe-dropdown-menu-ref>
-                            <li>
-                                <a class="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 dark:text-white dark:hover:bg-neutral-800/25"
-                                    href="#">Action</a>
-                            </li>
-                            <li>
-                                <a class="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 dark:text-white dark:hover:bg-neutral-800/25"
-                                    href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a class="block w-full whitespace-nowrap px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-zinc-200/60 dark:text-white dark:hover:bg-neutral-800/25"
-                                    href="#">Something else here</a>
-                            </li>
-                        </ul>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -307,44 +277,33 @@
         <!--image slider start-->
         <div class="absolute top-0 left-0 h-full w-full bg-black/50 ">
         </div>
-        <div class="slider">
+        <div class="slider w-full h-screen">
             <div class="slides">
-                <!--radio buttons start-->
-                <input type="radio" name="radio-btn" id="radio1" />
-                <input type="radio" name="radio-btn" id="radio2" />
-                <!--radio buttons end-->
                 <!--slide images start-->
-                <div class="slide first">
+                <div class="slide active">
                     <img src="asset/img/header/header-01.png" alt="" />
                 </div>
                 <div class="slide">
                     <img src="asset/img/header/header-02.png" alt="" />
                 </div>
-                <!--slide images end-->
-                <!--automatic navigation start-->
-                <div class="navigation-auto">
+                <div class="slide ">
+                    <img src="asset/img/header/header-03.jpeg" alt="" />
                 </div>
-                <!--automatic navigation end-->
+                <!--slide images end-->
             </div>
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-            </div>
-            <!--manual navigation end-->
         </div>
         <!--image slider end-->
 
         <!-- hero section -->
         <div class="container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center flex items-center justify-around">
-            <button class="hidden md:flex lg:flex text-center items-center justify-center bg-white rounded-full w-10 h-10 focus:bg-amber-400 transition-colors duration-200 ease-in" >
+            <button id="prev" class="hidden md:flex lg:flex text-center items-center justify-center bg-white rounded-full w-10 h-10 focus:bg-amber-400 transition-colors duration-200 ease-in" >
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
             <div>
                 <h1 class="text-7xl font-bold text-white mb-5">المطعم الملكي</h1>
                 <p class="text-base text-white">يمكنك من اختيار طلباتك المفضلة داخل او خارج المطعم ووصولها بسهولة</p>   
             </div>
-            <button class="hidden md:flex lg:flex  text-center flex items-center justify-center bg-white rounded-full w-10 h-10  focus:bg-amber-400 transition-colors duration-200 ease-in" >
+            <button id="next" class="hidden md:flex lg:flex  text-center flex items-center justify-center bg-white rounded-full w-10 h-10  focus:bg-amber-400 transition-colors duration-200 ease-in" >
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
         </div>
@@ -616,7 +575,7 @@
     </div>
 
     <!-- Products -->
-    <div class="container mx-auto mt-5 w-full relative">
+    <div id="products" class="container mx-auto mt-5 w-full relative">
         <!--Pills content-->
         <div class="mb-6">
             <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block" id="category-all" role="all" aria-labelledby="category-all" data-twe-tab-active>
@@ -648,7 +607,9 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                    <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                </button>
                                 <span class="rating flex"  data-id="1">
                                     <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
                                     <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
@@ -809,9 +770,6 @@
                     </div>
                     
                 </div>
-
-
-
             </div>
             <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block" id="category-dishes" role="dishes" aria-labelledby="category-dishes">
                 Tab 1 content
@@ -1056,7 +1014,7 @@
         <div class="w-full relative mb-10">
             <img src="asset/img/restatant/view-01.png" alt="" class="w-full">
         </div>
-        <div class="container mx-auto w-full relative flex justify-around">
+        <div class="container mx-auto w-full relative flex justify-around flex-wrap">
             <div>
                 <img src="asset/img/logo.png" alt="">
                 <p>
@@ -1065,7 +1023,7 @@
                 </p>
             </div>
             <div>
-                <ul class="w-96 text-surface dark:text-white">
+                <ul class="w-full text-surface dark:text-white">
                     <li class="w-full border-b-2 border-neutral-100 py-4 text-black">
                         روابط قد تهمك
                     </li>
@@ -1118,51 +1076,253 @@
     <div id="fullScreen" class="absolute top-0 left-0 bg-black/50 w-full h-full hidden" style="z-index: 1000;">
     </div>
 
-    <!-- modal -->
-    <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="rightTopModal" tabindex="-1" aria-labelledby="rightTopModalLabel" style="display: none;" aria-hidden="true">
-    <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-7 h-auto w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] opacity-0">
-        <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
-        <div class="flex flex-shrink-0 items-center justify-between rounded-t-md bg-info-600 p-4 dark:border-b dark:border-white/10">
-            <h5 class="text-xl font-medium leading-normal text-white" id="rightTopModalLabel">
-            Product in the cart
-            </h5>
-            <button type="button" class="box-content rounded-none border-none text-neutral-300/60 hover:text-neutral-300 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:focus:text-neutral-300" data-twe-modal-dismiss="" aria-label="Close">
-            <span class="[&amp;>svg]:h-6 [&amp;>svg]:w-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </span>
-            </button>
-        </div>
-        <div class="relative flex flex-auto p-4" data-twe-modal-body-ref="">
-            <span class="text-info-600 [&amp;>svg]:h-16 [&amp;>svg]:w-20">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"></path>
-            </svg>
-            </span>
-            <div class="ms-8">
-            <p class="my-4">
-                Do you need more time to make a purchase decision?
-            </p>
-            <p class="my-4">
-                No pressure, your product will be waiting for you in the cart.
-            </p>
+    <!--  empty Cart -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="cart" tabindex="-1" aria-labelledby="CartTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+                    <!-- Modal title -->
+                    <h5 class="text-xl font-medium leading-normal text-surface dark:text-white" id="CartTitle">
+                        سلة المشتريات
+                    </h5>
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="relative px-4 py-20">
+                    <!-- إذا كانت فارغة -->
+                    <div class="text-center flex justify-center items-center flex-col">
+                        <img src="asset/img/cart-01.png" alt="cart-01">
+                        <span>
+                            الطعام اللذيذ دائما جاهز ! <br>
+                            تفضل بطلب بعض العناصر اللذيذة من القائمة
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
+                    <button class="ms-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2" id="openCartFull" data-twe-toggle="modal" data-twe-target="#fullCart" data-twe-ripple-init data-twe-ripple-color="light">
+                        سلة ممتلئة
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
-            <button type="button" class="me-2 inline-block rounded bg-info px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]" data-twe-ripple-init="" data-twe-ripple-color="light">
-            Go to the cart
-            </button>
-            <button type="button" class="inline-block rounded border-2 border-info px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-info transition duration-150 ease-in-out hover:border-info-600 hover:bg-info-50/50 hover:text-info-600 focus:border-info-600 focus:bg-info-50/50 focus:text-info-600 focus:outline-none focus:ring-0 active:border-info-700 active:text-info-700 dark:hover:bg-cyan-950 dark:focus:bg-cyan-950" data-twe-modal-dismiss="" data-twe-ripple-init="" data-twe-ripple-color="light">
-            Close
-            </button>
-        </div>
+    </div>
+
+    <!--  full Cart -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="fullCart" tabindex="-1" aria-labelledby="fullCartTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+                    <!-- Modal title -->
+                    <h5 class="text-xl font-medium leading-normal text-surface dark:text-white" id="CartTitle">
+                        سلة المشتريات
+                    </h5>
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="relative px-4 py-4">
+                    <div class="flex items-baseline justify-between my-2 p-2 border-2 border-neutral-300 shadow-4 rounded-lg">
+                        <div class="flex item-center justify-start">
+                            <img src="asset/img/cart-02.png" alt="cart-01" class="rounded-lg	">
+                            <div class="flex flex-col justify-between items-start ms-3">
+                                <h4 class="text-xl font-bold text-black">فتة بالطحنية</h4>
+                                <span class="text-red-500">السعر: 5000 ج</span>
+                                <div class="flex flex-row items-center justify-between">
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <span class="text-black font-bold text-base mx-2">1</span>
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end h-full m-2">
+                            <button class="text-neutral-500 hover:text-red-700">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-baseline justify-between my-2 p-2 border-2 border-neutral-300 shadow-4 rounded-lg">
+                        <div class="flex item-center justify-start">
+                            <img src="asset/img/cart-02.png" alt="cart-01" class="rounded-lg	">
+                            <div class="flex flex-col justify-between items-start ms-3">
+                                <h4 class="text-xl font-bold text-black">فتة بالطحنية</h4>
+                                <span class="text-red-500">السعر: 5000 ج</span>
+                                <div class="flex flex-row items-center justify-between">
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <span class="text-black font-bold text-base mx-2">1</span>
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end h-full m-2">
+                            <button class="text-neutral-500 hover:text-red-700">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-baseline justify-between my-2 p-2 border-2 border-neutral-300 shadow-4 rounded-lg">
+                        <div class="flex item-center justify-start">
+                            <img src="asset/img/cart-02.png" alt="cart-01" class="rounded-lg	">
+                            <div class="flex flex-col justify-between items-start ms-3">
+                                <h4 class="text-xl font-bold text-black">فتة بالطحنية</h4>
+                                <span class="text-red-500">السعر: 5000 ج</span>
+                                <div class="flex flex-row items-center justify-between">
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                    <span class="text-black font-bold text-base mx-2">1</span>
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
+                                        <i class="fa-solid fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-end h-full m-2">
+                            <button class="text-neutral-500 hover:text-red-700">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex flex-shrink-0 flex-wrap items-center justify-center rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
+                    <div class="flex items-center justify-around w-full">
+                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white">التوصيل داخل المطعم</button>
+                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white">التوصيل خارج المطعم</button>
+                    </div>
+                    <div class="flex items-center justify-between w-3/4 mt-2 border-2 border-amber-400 shadow-lg rounded-lg">
+                        <span class="text-red-500 font-bold p-2">2000 ج</span>
+                        <span class="text-black font-bold p-2 bg-neutral-100 rounded-full shadow">3</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!--  Add to Cart -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="addToCartModal" tabindex="-1" aria-labelledby="fullCartTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-lg border-b-2 border-neutral-100 dark:border-white/10 relative">
+                    <!-- Modal title -->
+                    <img src="asset/img/gallery/gallery-01.jpeg" alt="" class="rounded-t-lg w-full" style="height: 21rem;">
+                    <div class="absolute w-full h-full top-0 left-0" style="background-color: #2e2e2e7c;">
+                    </div>
+                    <div class="flex flex-col items-center justify-center absolute text-white w-full z-10">
+                        <h3 class="font-bold text-lg">وجبة مشاوي مشكلة</h3>
+                        <p>شوربة تحتوي على الجزر و البطاطا  و قطع الدجاج</p>
+                    </div>
+                </div>
+
+                <!-- Modal body -->
+                <div class="relative px-4 py-4">
+                    <div class="flex items-baseline justify-between my-2 border-2 border-neutral-300 shadow-4 rounded-lg">
+                        <input type="text" class="w-3/4 h-full p-2">
+                        <span class="flex items-center whitespace-nowrap rounded-s  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface h-full bg-amber-500 rounded-full" style="width: 25%;" id="basic-addon1">@</span>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex flex-shrink-0 flex-wrap items-center justify-center rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
+                    <div class="flex items-center justify-around w-full">
+                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white">التوصيل داخل المطعم</button>
+                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white">التوصيل خارج المطعم</button>
+                    </div>
+                    <div class="flex items-center justify-between w-3/4 mt-2 border-2 border-amber-400 shadow-lg rounded-lg">
+                        <span class="text-red-500 font-bold p-2">2000 ج</span>
+                        <span class="text-black font-bold p-2 bg-neutral-100 rounded-full shadow">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right top modal -->
+    <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="rightTopModal" tabindex="-1" aria-labelledby="rightTopModalLabel" style="display: none;" aria-hidden="true">
+        <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-7 h-auto w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] opacity-0">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+            <div class="flex flex-shrink-0 items-center justify-between rounded-t-md bg-info-600 p-4 dark:border-b dark:border-white/10">
+                <h5 class="text-xl font-medium leading-normal text-white" id="rightTopModalLabel">
+                Product in the cart
+                </h5>
+                <button type="button" class="box-content rounded-none border-none text-neutral-300/60 hover:text-neutral-300 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:focus:text-neutral-300" data-twe-modal-dismiss="" aria-label="Close">
+                <span class="[&amp;>svg]:h-6 [&amp;>svg]:w-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </span>
+                </button>
+            </div>
+            <div class="relative flex flex-auto p-4" data-twe-modal-body-ref="">
+                <span class="text-info-600 [&amp;>svg]:h-16 [&amp;>svg]:w-20">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z"></path>
+                </svg>
+                </span>
+                <div class="ms-8">
+                <p class="my-4">
+                    Do you need more time to make a purchase decision?
+                </p>
+                <p class="my-4">
+                    No pressure, your product will be waiting for you in the cart.
+                </p>
+                </div>
+            </div>
+            <div class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
+                <button type="button" class="me-2 inline-block rounded bg-info px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#54b4d3] transition duration-150 ease-in-out hover:bg-info-600 hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:bg-info-600 focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] focus:outline-none focus:ring-0 active:bg-info-700 active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.3),0_4px_18px_0_rgba(84,180,211,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(84,180,211,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(84,180,211,0.2),0_4px_18px_0_rgba(84,180,211,0.1)]" data-twe-ripple-init="" data-twe-ripple-color="light">
+                Go to the cart
+                </button>
+                <button type="button" class="inline-block rounded border-2 border-info px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-info transition duration-150 ease-in-out hover:border-info-600 hover:bg-info-50/50 hover:text-info-600 focus:border-info-600 focus:bg-info-50/50 focus:text-info-600 focus:outline-none focus:ring-0 active:border-info-700 active:text-info-700 dark:hover:bg-cyan-950 dark:focus:bg-cyan-950" data-twe-modal-dismiss="" data-twe-ripple-init="" data-twe-ripple-color="light">
+                Close
+                </button>
+            </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+    <script src="asset/js/plugins/tw-elements.umd.min.js"></script>
     <script type="module" src="asset/js/tailwind.js"></script>
     <script src="asset/js/plugins/jquery-3.7.1.min.js"></script>
     <script src="asset/js/main.js"></script>
@@ -1216,16 +1376,6 @@
                 $('#show-more-2').hide();
             }
         }
-    </script>
-    <script type="text/javascript">
-        // var counter = 2;
-        // setInterval(function () {
-        //     document.getElementById('radio' + counter).checked = true;
-        //     counter++;
-        //     if (counter > 2) {
-        //         counter = 1;
-        //     }
-        // }, 5000);
     </script>
 </body>
 

@@ -1,21 +1,51 @@
 $(document).ready(function() {
 
-    $('.favorite').click(function() {
-        $(this).toggleClass('text-rose-600');
+    let currentIndex = 0;
+    const slides = $('.slide');
+    const slideCount = slides.length;
+    const intervalTime = 3000; // الوقت بين كل تغيير شريحة (بالميلي ثانية)
+
+    // دالة لتحديث الشرائح
+    function showSlide(index) {
+        slides.removeClass('active'); // إزالة الكلاس active من كل الشرائح
+        slides.eq(index).addClass('active'); // إضافة الكلاس active للشريحة الحالية
+    }
+
+    // دالة للانتقال إلى الشريحة التالية
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slideCount; // التبديل إلى الشريحة التالية
+        showSlide(currentIndex);
+    }
+
+    // دالة للانتقال إلى الشريحة السابقة
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slideCount) % slideCount; // التبديل إلى الشريحة السابقة
+        showSlide(currentIndex);
+    }
+
+    // تغيير الشريحة تلقائياً كل intervalTime
+    let slideInterval = setInterval(nextSlide, intervalTime);
+
+    // إيقاف التغيير التلقائي عند الضغط على الأزرار
+    $('#next').click(function() {
+        clearInterval(slideInterval); // إيقاف التغيير التلقائي
+        nextSlide(); // الانتقال إلى الشريحة التالية
+        slideInterval = setInterval(nextSlide, intervalTime); // إعادة التغيير التلقائي
+    });
+
+    $('#prev').click(function() {
+        clearInterval(slideInterval); // إيقاف التغيير التلقائي
+        prevSlide(); // الانتقال إلى الشريحة السابقة
+        slideInterval = setInterval(nextSlide, intervalTime); // إعادة التغيير التلقائي
     });
 
 
 
 
 
-
-
-
-
-
-
-
-
+    $('i.favorite').click(function() {
+        $(this).toggleClass('text-rose-700');
+    });
 
     // تمهيد لتخزين التقييم لكل مجموعة من النجوم
     const ratings = {};
