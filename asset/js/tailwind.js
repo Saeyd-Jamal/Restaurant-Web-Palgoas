@@ -7,6 +7,8 @@ import {
     initTWE,
 } from "tw-elements";
 
+import 'tw-elements';
+
 initTWE({ Collapse, Dropdown });
 initTWE({ Tab });
 initTWE({ Ripple });
