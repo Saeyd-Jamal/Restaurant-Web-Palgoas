@@ -13,7 +13,13 @@ module.exports = {
       height: {
         72: '18rem',
       },
+      width: {
+        90: '90%',
+      },
       colors: {
+        amber: {
+          400: '#FFC700',
+        },
         info: {
           DEFAULT: '#3b82f6',
           600: '#3b82f6', 

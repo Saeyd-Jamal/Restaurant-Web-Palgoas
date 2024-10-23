@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,6 +19,7 @@
     <!-- Style Link -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="asset/css/tailwind.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="asset/css/style.css" />
 
     <!-- Favicon -->
@@ -28,8 +28,8 @@
 
 <body class="min-h-screen relative">
     <header class="relative w-full h-screen">
-        <nav class="absolute top-0 left-0 w-full flex flex-col items-center justify-between text-white z-50">
-            <div class="container flex w-full items-center justify-between py-2 px-3 lg:py-4">
+        <nav class="absolute top-0 left-0 w-full flex flex-col items-center justify-between text-white z-50 ">
+            <div class="container flex w-90 items-center justify-between py-2 px-3 lg:py-4">
                 <div class="flex items-center">
                     <button type="button" class="block text-white/50 hover:no-underline focus:no-underline hover:text-amber-500 transition-colors duration-300 ease-in" data-twe-toggle="modal" data-twe-target="#rightTopModal" data-twe-ripple-init="" data-twe-ripple-color="light" >
                         <i class="fa-solid fa-bars"></i>
@@ -159,8 +159,8 @@
                     </a>
                 </div>
             </div>
-            <hr class="container w-full bg-amber-400 border-0 h-0.5 rounded-full">
-            <div class="container flex w-full items-center justify-between py-2 px-3 lg:py-4">
+            <hr class="container w-90 bg-amber-400 border-0 h-0.5 rounded-full">
+            <div class="container flex w-90 items-center justify-between py-2 px-3 lg:py-4">
                 <div class="flex items-center">
                     <!-- Logo -->
                     <a class="flex items-center text-neutral-900 dark:text-neutral-200 me-2" href="#">
@@ -251,7 +251,7 @@
                     </div>
                 </div>
             </div>
-            <hr class="container w-full bg-amber-400 border-0 h-0.5 rounded-full">
+            <hr class="container w-90 bg-amber-400 border-0 h-0.5 rounded-full">
         </nav>
         <!--image slider start-->
         <div class="absolute top-0 left-0 h-full w-full bg-black/50 ">
@@ -289,7 +289,7 @@
     </header>
 
     <!-- Categories -->
-    <div id="categories-container" class="container mx-auto mt-10 w-full relative">
+    <div id="categories-container" class="container mx-auto mt-10 w-90 relative">
         <div class="flex justify-between items-center">
             <h2 class="text-3xl font-bold my-5 text-black">قائمتنا</h2>
             <button  id="show-more" onclick="showMore()" class="text-lg font-bold text-neutral-400 hover:text-amber-600 hover:underline transition duration-200 ease-in">
@@ -554,7 +554,7 @@
     </div>
 
     <!-- Products -->
-    <div id="products" class="container mx-auto mt-5 w-full relative">
+    <div id="products" class="container mx-auto mt-5 w-90 relative">
         <!--Pills content-->
         <div class="mb-6">
             <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block" id="category-all" role="all" aria-labelledby="category-all" data-twe-tab-active>
@@ -618,7 +618,9 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                    <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                </button>
                                 <span class="rating flex"  data-id="1">
                                     <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
                                     <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
@@ -648,7 +650,9 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                    <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                </button>
                                 <span class="rating flex"  data-id="1">
                                     <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
                                     <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
@@ -678,7 +682,9 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                    <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                </button>
                                 <span class="rating flex"  data-id="1">
                                     <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
                                     <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
@@ -708,7 +714,9 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                    <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                </button>
                                 <span class="rating flex"  data-id="1">
                                     <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
                                     <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
@@ -738,7 +746,9 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                    <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                </button>
                                 <span class="rating flex"  data-id="1">
                                     <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
                                     <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
@@ -747,11 +757,202 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block" id="category-dishes" role="dishes" aria-labelledby="category-dishes">
-                Tab 1 content
+                <div class="flex justify-between items-center">
+                    <h2 class="text-3xl font-bold my-5 text-black">أطباق</h2>
+                </div>
+                <div class="w-full relative">
+                    <div class="swiper multiple-slide-carousel swiper-container relative">
+                        <div class="swiper-wrapper mb-16">
+                            <div class="swiper-slide" style="width: 335px;">
+                                <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                    <div class="relative p-6">
+                                        <div class="favorite absolute top-9 right-9 text-3xl w-12 h-12 flex items-center justify-center bg-white rounded-full z-10 ">
+                                            <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                        </div>
+                                        <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-01.jpeg'); height: 240px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                            <a href="#!">
+                                                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 text-surface dark:text-white">
+                                        <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                        <p class="mb-4 text-base text-black">
+                                            2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                        </p>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                            <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                            </button>
+                                            <span class="rating flex"  data-id="1">
+                                                <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                    <div class="relative p-6">
+                                        <div class="favorite absolute top-9 right-9 text-3xl w-12 h-12 flex items-center justify-center bg-white rounded-full z-10 ">
+                                            <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                        </div>
+                                        <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-01.jpeg'); height: 240px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                            <a href="#!">
+                                                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 text-surface dark:text-white">
+                                        <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                        <p class="mb-4 text-base text-black">
+                                            2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                        </p>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                            <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                            </button>
+                                            <span class="rating flex"  data-id="1">
+                                                <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                    <div class="relative p-6">
+                                        <div class="favorite absolute top-9 right-9 text-3xl w-12 h-12 flex items-center justify-center bg-white rounded-full z-10 ">
+                                            <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                        </div>
+                                        <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-01.jpeg'); height: 240px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                            <a href="#!">
+                                                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 text-surface dark:text-white">
+                                        <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                        <p class="mb-4 text-base text-black">
+                                            2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                        </p>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                            <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                            </button>
+                                            <span class="rating flex"  data-id="1">
+                                                <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                    <div class="relative p-6">
+                                        <div class="favorite absolute top-9 right-9 text-3xl w-12 h-12 flex items-center justify-center bg-white rounded-full z-10 ">
+                                            <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                        </div>
+                                        <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-01.jpeg'); height: 240px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                            <a href="#!">
+                                                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 text-surface dark:text-white">
+                                        <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                        <p class="mb-4 text-base text-black">
+                                            2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                        </p>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                            <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                            </button>
+                                            <span class="rating flex"  data-id="1">
+                                                <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                    <div class="relative p-6">
+                                        <div class="favorite absolute top-9 right-9 text-3xl w-12 h-12 flex items-center justify-center bg-white rounded-full z-10 ">
+                                            <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                        </div>
+                                        <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-01.jpeg'); height: 240px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                            <a href="#!">
+                                                <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 text-surface dark:text-white">
+                                        <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                        <p class="mb-4 text-base text-black">
+                                            2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                        </p>
+                                        <div class="flex justify-between items-center">
+                                            <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                            <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                        </div>
+                                        <div class="flex justify-between items-center">
+                                            <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                                <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                            </button>
+                                            <span class="rating flex"  data-id="1">
+                                                <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                                <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12" dir="ltr">
+                            <style>
+                                .swiper-button-next:after, .swiper-button-prev:after{
+                                    font-size: 18px !important;
+                                }
+                            </style>
+                            <button id="slider-button-left" class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full  hover:bg-indigo-600 !-translate-x-16" style="transform: rotate(180deg) !important;" data-carousel-prev>
+                                <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                            </button>
+                            <button id="slider-button-right" class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 !translate-x-16" style="transform: rotate(180deg) !important;"  data-carousel-next>
+                                <!-- <i class="fa-solid fa-chevron-left"></i> -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div
                 class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block"
@@ -771,7 +972,7 @@
     </div>
 
     <!-- Offer -->
-    <div class="container mx-auto mt-5 w-full relative">
+    <div class="container mx-auto mt-5 w-90 relative">
         <div class="flex justify-between items-center">
             <h2 class="text-3xl font-bold my-5 text-black">العروض</h2>
             <a href="#" class="text-lg font-bold text-amber-400 hover:text-amber-600 hover:underline transition duration-200 ease-in">
@@ -796,191 +997,278 @@
     </div>
 
     <!-- Favorite -->
-    <div class="container mx-auto mt-5 w-full relative">
+    <div class="container mx-auto mt-5 w-90 relative">
         <div class="flex justify-between items-center">
             <h2 class="text-3xl font-bold my-5 text-black">وجبات أكثر شيوعا</h2>
             <a href="#" class="text-lg font-bold text-amber-400 hover:text-amber-600 hover:underline transition duration-200 ease-in">
                 عرض الكل
             </a>
         </div>
-        <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style="gap: 40px;">
-            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
-                <div class="relative">
-                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
-                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+        <div class="container mx-auto w-full">
+            <div class="w-full relative">
+                <div class="swiper multiple-slide-carousel swiper-container relative">
+                    <div class="swiper-wrapper mb-16">
+                        <div class="swiper-slide">
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 mt-3">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 mt-3">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 mt-3">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 mt-3">
+                                <div class="relative">
+                                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
+                                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
+                                    </div>
+                                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
+                                        <a href="#!">
+                                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-6 text-surface dark:text-white">
+                                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
+                                    <p class="mb-4 text-base text-black">
+                                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
+                                    </p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-black font-bold text-base">سعر الوجبة </span>
+                                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
+                                        <span class="rating flex"  data-id="1">
+                                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
-                        <a href="#!">
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-6 text-surface dark:text-white">
-                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
-                    <p class="mb-4 text-base text-black">
-                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-black font-bold text-base">سعر الوجبة </span>
-                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
-                        <span class="rating flex"  data-id="1">
-                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
-                <div class="relative">
-                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
-                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
-                    </div>
-                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
-                        <a href="#!">
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-6 text-surface dark:text-white">
-                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
-                    <p class="mb-4 text-base text-black">
-                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-black font-bold text-base">سعر الوجبة </span>
-                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
-                        <span class="rating flex"  data-id="1">
-                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
-                <div class="relative">
-                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
-                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
-                    </div>
-                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
-                        <a href="#!">
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-6 text-surface dark:text-white">
-                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
-                    <p class="mb-4 text-base text-black">
-                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-black font-bold text-base">سعر الوجبة </span>
-                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
-                        <span class="rating flex"  data-id="1">
-                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
-                <div class="relative">
-                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
-                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
-                    </div>
-                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
-                        <a href="#!">
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-6 text-surface dark:text-white">
-                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
-                    <p class="mb-4 text-base text-black">
-                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-black font-bold text-base">سعر الوجبة </span>
-                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
-                        <span class="rating flex"  data-id="1">
-                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
-                <div class="relative">
-                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
-                        <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
-                    </div>
-                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
-                        <a href="#!">
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-6 text-surface dark:text-white">
-                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
-                    <p class="mb-4 text-base text-black">
-                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-black font-bold text-base">سعر الوجبة </span>
-                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
-                        <span class="rating flex"  data-id="1">
-                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
-                <div class="relative">
-                    <div class="favorite absolute top-1 right-1 text-3xl w-12 h-12 flex items-center justify-center z-10 ">
-                        <i class="favorite fa-solid fa-heart  hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
-                    </div>
-                    <div class="relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-lg" style="background-image: url('asset/img/gallery/gallery-04.png'); height: 200px; width: 140px;" data-twe-ripple-init data-twe-ripple-color="light">
-                        <a href="#!">
-                            <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-                        </a>
-                    </div>
-                </div>
-                <div class="p-6 text-surface dark:text-white">
-                    <h5 class="mb-2 text-xl font-bold leading-tight text-black">وجبة مشاوي مشكل لشخصين</h5>
-                    <p class="mb-4 text-base text-black">
-                        2 شيش طاووق +2 كباب+2 مسحب+ شيبس
-                    </p>
-                    <div class="flex justify-between items-center">
-                        <span class="text-black font-bold text-base">سعر الوجبة </span>
-                        <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
-                        <span class="rating flex"  data-id="1">
-                            <i class="fa-solid fa-star text-amber-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                            <i class="fa-solid fa-star text-neutral-400 transition-color duration-200 ease-in cursor-pointer"></i>
-                        </span>
+                    <div class="absolute flex justify-center items-center m-auto left-0 right-0 w-fit bottom-12" dir="ltr">
+                        <style>
+                            .swiper-button-next:after, .swiper-button-prev:after{
+                                font-size: 18px !important;
+                            }
+                        </style>
+                        <button id="slider-button-left" class="swiper-button-prev group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full  hover:bg-indigo-600 !-translate-x-16" style="transform: rotate(180deg) !important;" data-carousel-prev>
+                            <!-- <i class="fa-solid fa-chevron-right"></i> -->
+                        </button>
+                        <button id="slider-button-right" class="swiper-button-next group !p-2 flex justify-center items-center border border-solid border-indigo-600 !w-12 !h-12 transition-all duration-500 rounded-full hover:bg-indigo-600 !translate-x-16" style="transform: rotate(180deg) !important;"  data-carousel-next>
+                            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1027,7 +1315,7 @@
             </div>
         </div>
         <div class="w-full relative mt-10 bg-amber-400">
-            <div class="container mx-auto w-full flex justify-between items-center py-4">
+            <div class="container mx-auto w-90 flex justify-between items-center py-4">
                 <div class="flex items-center text-white gap-4 font-bold text-xl">
                     <a href="#" target="_blank" class="hover:text-sky-500 transition-color duration-200 ease-in">
                         <i class="fa-brands fa-facebook"></i>
@@ -1207,8 +1495,8 @@
                 <!-- Modal footer -->
                 <div class="flex flex-shrink-0 flex-wrap items-center justify-center rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
                     <div class="flex items-center justify-around w-full">
-                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white">التوصيل داخل المطعم</button>
-                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white">التوصيل خارج المطعم</button>
+                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white" id="openNumberOfTable" data-twe-toggle="modal" data-twe-target="#numberOfTable" data-twe-ripple-init data-twe-ripple-color="light" onclick="colseModal('fullCart')">التوصيل داخل المطعم</button>
+                        <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white" id="openCartFull" data-twe-toggle="modal" data-twe-target="#orderData" data-twe-ripple-init data-twe-ripple-color="light" onclick="colseModal('fullCart')">التوصيل خارج المطعم</button>
                     </div>
                     <div class="flex items-center justify-between w-3/4 mt-2 border-2 border-amber-400 shadow-lg rounded-lg">
                         <span class="text-red-500 font-bold p-2">2000 ج</span>
@@ -1219,8 +1507,140 @@
         </div>
     </div>
 
+    <!--  Number of Table -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="numberOfTable" tabindex="-1" aria-labelledby="numberOfTableTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="relative px-4 py-4">
+                    <div class="flex flex-col items-center justify-center p-5">
+                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base" placeholder="أدخل رقم الطاولة">
+                        <button class="w-full px-6 py-2 mt-3 bg-amber-400 rounded-full hover:bg-amber-500 focus:bg-amber-500 flex items-center justify-between" id="openCheckoutInside" data-twe-toggle="modal" data-twe-target="#checkoutInside" data-twe-ripple-init data-twe-ripple-color="light">
+                            <span class="text-red-500 font-bold">6.84$</span>
+                            <span class="text-black font-bold">تأكيد الشراء</span>
+                            <span class="text-black text-base bg-white p-3 w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  Checkout inside -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="checkoutInside" tabindex="-1" aria-labelledby="checkoutInsideTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark  border-4  border-amber-400 shadow-inner ">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md p-4 dark:border-white/10">
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="relative px-4 py-4 flex items-center justify-center">
+                    <div class="flex flex-col items-center justify-center p-5 w-3/4">
+                        <div class="w-full flex items-center justify-between ps-2 shadow-md text-black rounded-full">
+                            <span class="text-black">طاولة رقم</span>
+                            <span class="text-black bg-amber-400 p-3 w-1/4 h-full rounded-l-full flex items-center justify-center">30</span>
+                        </div>
+                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
+                            2 بيتزا 
+                        </div>
+                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
+                            1 مايونيز وسط
+                        </div>
+                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
+                            1 مايونيز وسط
+                        </div>
+                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
+                            1 كوكاكولا + 1 فانتا
+                        </div>
+                        <div class="w-full flex items-center justify-center mt-5">
+                            <div class="w-36 h-36 flex flex-col items-center justify-center p-3 text-black rounded-full bg-amber-400 border-4 border-neutral-300 ">
+                                <span class="text-black font-bold">20:00:00</span>
+                                <span class="text-black font-bold text-2xl">00:06:32</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  Order Out Data -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="orderData" tabindex="-1" aria-labelledby="orderDataTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="relative px-4 py-4">
+                    <div class="flex flex-col items-center justify-center p-5">
+                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base" placeholder="أدخل عنوانك">
+                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base mt-3" placeholder="أدخل رقم الجوال">
+                        <button class="w-full px-6 py-2 mt-3 bg-amber-400 rounded-full hover:bg-amber-500 focus:bg-amber-500 flex items-center justify-between" >
+                            <span class="text-red-500 font-bold">6.84$</span>
+                            <span class="text-black font-bold">تأكيد الشراء</span>
+                            <span class="text-black text-base bg-white p-3 w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <!--  Add to Cart -->
-    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="addToCartModal" tabindex="-1" aria-labelledby="fullCartTitle" aria-modal="true" role="dialog">
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartTitle" aria-modal="true" role="dialog">
         <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
             <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
                 <div class="flex flex-shrink-0 items-center justify-between rounded-lg border-b-2 border-neutral-100 dark:border-white/10 relative">
@@ -1240,6 +1660,34 @@
                         <div class="flex border-2 border-amber-400 shadow-lg rounded-full">
                             <input type="text" placeholder="لديك ملاحظات إضافية؟" class="w-full  bg-white p-2 text-base font-medium outline-0 rounded-r-full" id="">
                             <input type="button" value="حفظ" class="bg-amber-400 py-2 px-4 rounded-full text-black text-sm font-semibold hover:bg-amber-800 transition-colors">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center p-5">
+                        <div class="flex flex-col w-2/3 space-y-4 p-5">
+                            <label class="relative flex items-center justify-around cursor-pointer">
+                                <span class="ml-2 text-black w-2/4">طبق كبيرة</span>
+                                <span class="ml-2 text-red-500 w-1/4" align="center">6,84$</span>
+                                <input checked="" class="sr-only peer" name="futuristic-radio" type="radio" />
+                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </label>
+                            <label class="relative flex items-center justify-around cursor-pointer">
+                                <span class="ml-2 text-black w-2/4">طبق وسط</span>
+                                <span class="ml-2 text-red-500 w-1/4" align="center">6,84$</span>
+                                <input class="sr-only peer" name="futuristic-radio" type="radio" />
+                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </label>
+                            <label class="relative flex items-center justify-around cursor-pointer">
+                                <span class="ml-2 text-black w-2/4">طبق صغير</span>
+                                <span class="ml-2 text-red-500 w-1/4" align="center">6,84$</span>
+                                <input class="sr-only peer" name="futuristic-radio" type="radio" />
+                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -1551,7 +1999,6 @@
         </div>
     </div>
 
-
     <!-- Sidebar For (Settings) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="SettingsModal" tabindex="-1" aria-labelledby="SettingsModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -1633,7 +2080,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Sidebar For (Balanced) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="BalancedModal" tabindex="-1" aria-labelledby="BalancedModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -1755,7 +2202,6 @@
         </div>
     </div>
         
-
     <!-- Sidebar For (Logout) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="LogoutModal" tabindex="-1" aria-labelledby="LogoutModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -1785,13 +2231,22 @@
     </div>
         
 
-    
+
     <!-- Scripts -->
     <script src="asset/js/plugins/tw-elements.umd.min.js"></script>
     <script type="module" src="asset/js/tailwind.js"></script>
     <script src="asset/js/plugins/jquery-3.7.1.min.js"></script>
     <script src="asset/js/main.js"></script>
+
+
+    <!-- for this page -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+
+        function colseModal(id) {
+            $(`#${id}`).modal('hide');
+        }
+
         $('#categories li').click(function() {
             $('#categories li:gt(6)').hide();
             $('#fullScreen').addClass('hidden');
@@ -1841,6 +2296,36 @@
                 $('#show-more-2').hide();
             }
         }
+    </script>
+    <script>
+        var swiper = new Swiper(".multiple-slide-carousel", {
+            loop: true,
+                slidesPerView: 3,
+                spaceBetween: 20,
+                navigation: {
+                    nextEl: ".multiple-slide-carousel .swiper-button-next",
+                    prevEl: ".multiple-slide-carousel .swiper-button-prev",
+                },
+                breakpoints: {
+                    1920: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1028: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    800: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    375: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    }
+                    
+                }
+        });
     </script>
 </body>
 
