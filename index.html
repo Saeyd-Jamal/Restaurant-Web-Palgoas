@@ -19,7 +19,7 @@
     <!-- Style Link -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="asset/css/tailwind.css">
-    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="asset/css/swiper-bundle.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="asset/css/style.css" />
 
     <!-- Favicon -->
@@ -27,6 +27,7 @@
 </head>
 
 <body class="min-h-screen relative">
+    <!-- Header -->
     <header class="relative w-full h-screen">
         <nav class="absolute top-0 left-0 w-full flex flex-col items-center justify-between text-white z-50 ">
             <div class="container flex w-90 items-center justify-between py-2 px-3 lg:py-4">
@@ -289,7 +290,7 @@
     </header>
 
     <!-- Categories -->
-    <div id="categories-container" class="container mx-auto mt-10 w-90 relative">
+    <section id="categories-container" class="container mx-auto mt-10 w-90 relative">
         <div class="flex justify-between items-center">
             <h2 class="text-3xl font-bold my-5 text-black">قائمتنا</h2>
             <button  id="show-more" onclick="showMore()" class="text-lg font-bold text-neutral-400 hover:text-amber-600 hover:underline transition duration-200 ease-in">
@@ -551,10 +552,10 @@
                 عرض المزيد
             </button>
         </ul>        
-    </div>
+    </section>
 
     <!-- Products -->
-    <div id="products" class="container mx-auto mt-5 w-90 relative">
+    <section id="products" class="container mx-auto mt-5 w-90 relative">
         <!--Pills content-->
         <div class="mb-6">
             <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[twe-tab-active]:block" id="category-all" role="all" aria-labelledby="category-all" data-twe-tab-active>
@@ -565,7 +566,7 @@
                     </a>
                 </div>
                 <div class="container mx-auto w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style="gap: 60px;">
-                    <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 ">
+                    <div class="block rounded-lg bg-white shadow-lg shadow-inner border border-gray-200 product" data-id="1">
                         <div class="relative p-6">
                             <div class="favorite absolute top-9 right-9 text-3xl w-12 h-12 flex items-center justify-center bg-white rounded-full z-10 ">
                                 <i class="favorite fa-solid fa-heart text-rose-700 hover:text-rose-700 transition duration-150 ease-in cursor-pointer"></i>
@@ -586,7 +587,7 @@
                                 <span class="text-rose-500 font-bold text-base">6,84 ₪</span>
                             </div>
                             <div class="flex justify-between items-center">
-                                <button type="button" data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
+                                <button type="button" class="add-to-cart-btn" data-product-id="1"  data-twe-toggle="modal" data-twe-target="#addToCartModal" data-twe-ripple-init data-twe-ripple-color="light">
                                     <i class="fa-solid fa-cart-plus text-xl cursor-pointer text-neutral-400 hover:text-amber-400 transition-color duration-200 ease-in"></i>
                                 </button>
                                 <span class="rating flex"  data-id="1">
@@ -969,10 +970,10 @@
                 Tab 3 content
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Offer -->
-    <div class="container mx-auto mt-5 w-90 relative">
+    <section class="container mx-auto mt-5 w-90 relative">
         <div class="flex justify-between items-center">
             <h2 class="text-3xl font-bold my-5 text-black">العروض</h2>
             <a href="#" class="text-lg font-bold text-amber-400 hover:text-amber-600 hover:underline transition duration-200 ease-in">
@@ -994,10 +995,10 @@
             </div>
         </div>
 
-    </div>
+    </section>
 
     <!-- Favorite -->
-    <div class="container mx-auto mt-5 w-90 relative">
+    <section class="container mx-auto mt-5 w-90 relative">
         <div class="flex justify-between items-center">
             <h2 class="text-3xl font-bold my-5 text-black">وجبات أكثر شيوعا</h2>
             <a href="#" class="text-lg font-bold text-amber-400 hover:text-amber-600 hover:underline transition duration-200 ease-in">
@@ -1273,7 +1274,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 
     <!-- Footer -->
@@ -1343,8 +1344,14 @@
     <div id="fullScreen" class="absolute top-0 left-0 bg-black/50 w-full h-full hidden" style="z-index: 1000;">
     </div>
 
-    <!--  empty Cart -->
-    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="cart" tabindex="-1" aria-labelledby="CartTitle" aria-modal="true" role="dialog">
+
+    <!-- Start Modals -->
+
+
+    <!-- ********* Cart ********** -->
+
+    <!--  Cart -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="cart" tabindex="-1" aria-labelledby="cartTitle" aria-modal="true" role="dialog">
         <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
             <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
                 <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
@@ -1371,7 +1378,7 @@
                 </div>
 
                 <!-- Modal body -->
-                <div class="relative px-4 py-20">
+                <div class="relative px-4 py-4 my-40 emptyCart">
                     <!-- إذا كانت فارغة -->
                     <div class="text-center flex justify-center items-center flex-col">
                         <img src="asset/img/cart-01.png" alt="cart-01">
@@ -1382,45 +1389,8 @@
                     </div>
                 </div>
 
-                <!-- Modal footer -->
-                <div class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
-                    <button class="ms-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2" id="openCartFull" data-twe-toggle="modal" data-twe-target="#fullCart" data-twe-ripple-init data-twe-ripple-color="light">
-                        سلة ممتلئة
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--  full Cart -->
-    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="fullCart" tabindex="-1" aria-labelledby="fullCartTitle" aria-modal="true" role="dialog">
-        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
-            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
-                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
-                    <!-- Modal title -->
-                    <h5 class="text-xl font-medium leading-normal text-surface dark:text-white" id="CartTitle">
-                        سلة المشتريات
-                    </h5>
-                    <!-- Close button -->
-                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
-                    <span class="[&>svg]:h-6 [&>svg]:w-6">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor">
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </span>
-                    </button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="relative px-4 py-4">
+                <!-- بعد الإمتلاء -->
+                <div class="relative px-4 py-4 fullCart cart-items" style="display: none;">
                     <div class="flex items-baseline justify-between my-2 p-2 border-2 border-neutral-300 shadow-4 rounded-lg">
                         <div class="flex item-center justify-start">
                             <img src="asset/img/cart-02.png" alt="cart-01" class="rounded-lg	">
@@ -1493,19 +1463,100 @@
                 </div>
 
                 <!-- Modal footer -->
-                <div class="flex flex-shrink-0 flex-wrap items-center justify-center rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10">
+                <div class="flex flex-shrink-0 flex-wrap items-center justify-center rounded-b-md border-t-2 border-neutral-100 p-4 dark:border-white/10 fullCart" style="display: none;">
                     <div class="flex items-center justify-around w-full">
                         <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white" id="openNumberOfTable" data-twe-toggle="modal" data-twe-target="#numberOfTable" data-twe-ripple-init data-twe-ripple-color="light" onclick="colseModal('fullCart')">التوصيل داخل المطعم</button>
                         <button class="px-6 py-2 bg-neutral-300  text-black  rounded-lg hover:bg-amber-600  hover:text-white focus:bg-amber-600 focus:text-white" id="openCartFull" data-twe-toggle="modal" data-twe-target="#orderData" data-twe-ripple-init data-twe-ripple-color="light" onclick="colseModal('fullCart')">التوصيل خارج المطعم</button>
                     </div>
                     <div class="flex items-center justify-between w-3/4 mt-2 border-2 border-amber-400 shadow-lg rounded-lg">
-                        <span class="text-red-500 font-bold p-2">2000 ج</span>
-                        <span class="text-black font-bold p-2 bg-neutral-100 rounded-full shadow">3</span>
+                        <span class="text-red-500 font-bold p-2">
+                            <span class="total-price">0</span>$
+                        </span>
+                        <span class="text-black font-bold p-2 bg-neutral-100 rounded-full shadow total-quantity">0</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--  Add product to Cart -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-lg border-b-2 border-neutral-100 dark:border-white/10 relative">
+                    <!-- Modal title -->
+                    <img src="asset/img/gallery/gallery-01.jpeg" alt="" class="rounded-t-lg w-full" style="height: 21rem;">
+                    <div class="absolute w-full h-full top-0 left-0" style="background-color: #2e2e2e7c;">
+                    </div>
+                    <div class="flex flex-col items-center justify-center absolute text-white w-full z-10">
+                        <h3 class="font-bold text-lg" id="name-product-1">وجبة مشاوي مشكلة</h3>
+                        <p>شوربة تحتوي على الجزر و البطاطا  و قطع الدجاج</p>
+                    </div>
+                </div>
+
+                <!-- Modal body -->
+                <div class="relative px-4 py-4">
+                    <div class="flex items-center justify-center p-5">
+                        <div class="flex border-2 border-amber-400 shadow-lg rounded-full">
+                            <textarea name="note" class="w-full  bg-white p-2 text-base font-medium outline-0 rounded-r-full" id=""  placeholder="لديك ملاحظات إضافية؟" rows="1"></textarea>
+                            <input type="button" value="حفظ" class="bg-amber-400 py-2 px-4 rounded-full text-black text-sm font-semibold hover:bg-amber-800 transition-colors">
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center p-5">
+                        <div class="flex flex-col w-2/3 space-y-4 p-5">
+                            <label class="relative flex items-center justify-around cursor-pointer">
+                                <span class="ml-2 text-black w-2/4">طبق كبيرة</span>
+                                <span class="ml-2 text-red-500 w-1/4" align="center">5$</span>
+                                <input checked="" class="sr-only peer" name="size-1" value="5" data-price="5" type="radio" />
+                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </label>
+                            <label class="relative flex items-center justify-around cursor-pointer">
+                                <span class="ml-2 text-black w-2/4">طبق وسط</span>
+                                <span class="ml-2 text-red-500 w-1/4" align="center">8$</span>
+                                <input class="sr-only peer" name="size-1" value="8" data-price="8" type="radio" />
+                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </label>
+                            <label class="relative flex items-center justify-around cursor-pointer">
+                                <span class="ml-2 text-black w-2/4">طبق صغير</span>
+                                <span class="ml-2 text-red-500 w-1/4" align="center">10$</span>
+                                <input class="sr-only peer" name="size-1" value="10" data-price="10" type="radio" />
+                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex flex-shrink-0 flex-wrap items-center justify-around rounded-b-md border-t-2 border-neutral-100 p-4  dark:border-white/10">
+                    <div class="flex items-center justify-around w-3/4">
+                        <button class="flex items-center justify-between px-4 py-2 bg-amber-400  text-black  rounded-full hover:bg-amber-500  hover:text-white focus:bg-amber-500 focus:text-white confirm-add" data-product-id="1" onclick="colseModal('addToCartModal')">
+                            <span class="text-black font-medium text-base pe-2">إضافة الى سلة الشراء</span>
+                            <span class="text-red-600 font-bold text-base">
+                                <span class="popup-price" data-product-id="1">5</span> $</span>
+                        </button>
+                        <div class="flex flex-row items-center justify-between ms-3">
+                            <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200 calc-quantity" data-type="minus" data-product-id="1">
+                                <i class="fa-solid fa-minus"></i>
+                            </button>
+                            <span class="text-black font-bold text-base mx-2" id="quantity-1">1</span>
+                            <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200 calc-quantity" data-type="plus" data-product-id="1">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- ********* Order Inside ********** -->
 
     <!--  Number of Table -->
     <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="numberOfTable" tabindex="-1" aria-labelledby="numberOfTableTitle" aria-modal="true" role="dialog">
@@ -1532,11 +1583,13 @@
                 <!-- Modal body -->
                 <div class="relative px-4 py-4">
                     <div class="flex flex-col items-center justify-center p-5">
-                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base" placeholder="أدخل رقم الطاولة">
-                        <button class="w-full px-6 py-2 mt-3 bg-amber-400 rounded-full hover:bg-amber-500 focus:bg-amber-500 flex items-center justify-between" id="openCheckoutInside" data-twe-toggle="modal" data-twe-target="#checkoutInside" data-twe-ripple-init data-twe-ripple-color="light">
-                            <span class="text-red-500 font-bold">6.84$</span>
+                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base" placeholder="أدخل رقم الطاولة" id="numberOfTableInput">
+                        <button class="w-full px-6 py-2 mt-3 bg-amber-400 rounded-full hover:bg-amber-500 focus:bg-amber-500 flex items-center justify-between" id="confirmNumberOfTable" data-twe-toggle="modal" data-twe-target="#checkoutInside" data-twe-ripple-init data-twe-ripple-color="light">
+                            <span class="text-red-500 font-bold">
+                                <span class="total-price">0</span>$
+                            </span>
                             <span class="text-black font-bold">تأكيد الشراء</span>
-                            <span class="text-black text-base bg-white p-3 w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                            <span class="text-black text-base bg-white p-3 w-5 h-5 rounded-full flex items-center justify-center total-quantity">0</span>
                         </button>
                     </div>
                 </div>
@@ -1572,19 +1625,18 @@
                     <div class="flex flex-col items-center justify-center p-5 w-3/4">
                         <div class="w-full flex items-center justify-between ps-2 shadow-md text-black rounded-full">
                             <span class="text-black">طاولة رقم</span>
-                            <span class="text-black bg-amber-400 p-3 w-1/4 h-full rounded-l-full flex items-center justify-center">30</span>
+                            <span class="text-black bg-amber-400 p-3 w-1/4 h-full rounded-l-full flex items-center justify-center" id="numberOfTableForInside">30</span>
                         </div>
-                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
-                            2 بيتزا 
+                        <div class="flex flex-col items-center justify-center p-5 w-full" id="cartInsideItems">
+                            <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
+                                <!-- 2 بيتزا  -->
+                            </div>
                         </div>
-                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
-                            1 مايونيز وسط
-                        </div>
-                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
-                            1 مايونيز وسط
-                        </div>
-                        <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
-                            1 كوكاكولا + 1 فانتا
+                        <div class="w-full flex items-center justify-between ps-2 shadow-md text-black rounded-full">
+                            <span class="text-black">الفاتورة</span>
+                            <span class="text-black bg-amber-400 p-3 w-1/4 h-full rounded-l-full flex items-center justify-center">
+                                <span class="total-price">0</span>$
+                            </span>
                         </div>
                         <div class="w-full flex items-center justify-center mt-5">
                             <div class="w-36 h-36 flex flex-col items-center justify-center p-3 text-black rounded-full bg-amber-400 border-4 border-neutral-300 ">
@@ -1598,6 +1650,10 @@
             </div>
         </div>
     </div>
+
+
+
+    <!-- ********* Order Outside ********** -->
 
     <!--  Order Out Data -->
     <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="orderData" tabindex="-1" aria-labelledby="orderDataTitle" aria-modal="true" role="dialog">
@@ -1624,12 +1680,14 @@
                 <!-- Modal body -->
                 <div class="relative px-4 py-4">
                     <div class="flex flex-col items-center justify-center p-5">
-                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base" placeholder="أدخل عنوانك">
+                        <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base" placeholder="أدخل عنوانك" id="address-order-input">
                         <input type="text" class="bg-neutral-200 text-neutral-600 block w-full rounded-full border-0 py-1.5 px-3 text-base mt-3" placeholder="أدخل رقم الجوال">
-                        <button class="w-full px-6 py-2 mt-3 bg-amber-400 rounded-full hover:bg-amber-500 focus:bg-amber-500 flex items-center justify-between" >
-                            <span class="text-red-500 font-bold">6.84$</span>
+                        <button class="w-full px-6 py-2 mt-3 bg-amber-400 rounded-full hover:bg-amber-500 focus:bg-amber-500 flex items-center justify-between" id="doneOursideOrder" data-twe-toggle="modal" data-twe-target="#doneOutOrder" data-twe-ripple-init data-twe-ripple-color="light" onclick="colseModal('orderData')">
+                            <span class="text-red-500 font-bold">
+                                <span class="total-price">0</span>$
+                            </span>
                             <span class="text-black font-bold">تأكيد الشراء</span>
-                            <span class="text-black text-base bg-white p-3 w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                            <span class="text-black text-base bg-white p-3 w-5 h-5 rounded-full flex items-center justify-center total-quantity">0</span>
                         </button>
                     </div>
                 </div>
@@ -1638,81 +1696,124 @@
         </div>
     </div>
 
-
-    <!--  Add to Cart -->
-    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartTitle" aria-modal="true" role="dialog">
-        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] w-auto translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:min-h-[calc(100%-3.5rem)] min-[576px]:max-w-[500px]">
-            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
-                <div class="flex flex-shrink-0 items-center justify-between rounded-lg border-b-2 border-neutral-100 dark:border-white/10 relative">
-                    <!-- Modal title -->
-                    <img src="asset/img/gallery/gallery-01.jpeg" alt="" class="rounded-t-lg w-full" style="height: 21rem;">
-                    <div class="absolute w-full h-full top-0 left-0" style="background-color: #2e2e2e7c;">
-                    </div>
-                    <div class="flex flex-col items-center justify-center absolute text-white w-full z-10">
-                        <h3 class="font-bold text-lg">وجبة مشاوي مشكلة</h3>
-                        <p>شوربة تحتوي على الجزر و البطاطا  و قطع الدجاج</p>
-                    </div>
+    <!-- Done out Order -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="doneOutOrder" tabindex="-1" aria-labelledby="doneOutOrderTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 w-3/4 max-w-4xl max-h-full">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark" style="height: 70vh;">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
                 </div>
-
                 <!-- Modal body -->
-                <div class="relative px-4 py-4">
-                    <div class="flex items-center justify-center p-5">
-                        <div class="flex border-2 border-amber-400 shadow-lg rounded-full">
-                            <input type="text" placeholder="لديك ملاحظات إضافية؟" class="w-full  bg-white p-2 text-base font-medium outline-0 rounded-r-full" id="">
-                            <input type="button" value="حفظ" class="bg-amber-400 py-2 px-4 rounded-full text-black text-sm font-semibold hover:bg-amber-800 transition-colors">
-                        </div>
+                <div class="relative px-4 py-4 flex flex-col justify-center items-center h-full">
+                    <div class="card__form p-4 w-1/3 flex flex-col justify-center items-center">
+                        <img src="asset/img/gps.png" alt="" class="mb-6">
+                        <p class="text-center text-black font-medium text-2xl mb-6">
+                            <span>تمت عملية الشراء بنجاح</span>
+                            <br>
+                            <span>انتظار احضار الطلب في غضون 20 <br> دقيقة</span>
+                        </p>
+                        <button class="bg-amber-400 hover:bg-amber-700 text-black font-bold w-3/4 p-4 rounded-full flex items-center justify-center transition ease-in duration-200" data-twe-toggle="modal" data-twe-target="#courseOfDemand" data-twe-ripple-init data-twe-ripple-color="light" onclick="colseModal('doneOutOrder')">
+                            إنتظار
+                        </button>
                     </div>
-                    <div class="flex items-center justify-center p-5">
-                        <div class="flex flex-col w-2/3 space-y-4 p-5">
-                            <label class="relative flex items-center justify-around cursor-pointer">
-                                <span class="ml-2 text-black w-2/4">طبق كبيرة</span>
-                                <span class="ml-2 text-red-500 w-1/4" align="center">6,84$</span>
-                                <input checked="" class="sr-only peer" name="futuristic-radio" type="radio" />
-                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
-                                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Course of Demand -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="courseOfDemand" tabindex="-1" aria-labelledby="courseOfDemandTitle" aria-modal="true" role="dialog">
+        <div data-twe-modal-dialog-ref class="pointer-events-none relative flex min-h-[calc(100%-1rem)] translate-y-[-50px] items-center opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 w-3/4 max-w-4xl max-h-full">
+            <div class="pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark" style="height: 70vh;">
+                <div class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 p-4 dark:border-white/10">
+                    <!-- Close button -->
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                    <span class="[&>svg]:h-6 [&>svg]:w-6">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="relative px-4 py-4 flex flex-col justify-center items-center h-full">
+                    <div class="card__form p-4 flex justify-between items-center">
+                        <div class="flex flex-col justify-center items-center">
+                            <img src="asset/img/logoD.png" alt="" class="w-[100px] mb-4">
+                            <div class="flex item-center justify-between w-2/3 my-3">
+                                <div class="flex justify-center items-start w-1/2">
+                                    <i class="fa-solid fa-location-dot text-amber-400 me-4 text-xl"></i>
+                                    <div>
+                                        <h2>عنوان التسليم</h2>
+                                        <p class="text-neutral-400 address-order">مفترق فلسطسن - شارع الشهدا  -عمار الغصين - الطاربق الرابع -شركة بال قول </p>
+                                    </div>
                                 </div>
-                            </label>
-                            <label class="relative flex items-center justify-around cursor-pointer">
-                                <span class="ml-2 text-black w-2/4">طبق وسط</span>
-                                <span class="ml-2 text-red-500 w-1/4" align="center">6,84$</span>
-                                <input class="sr-only peer" name="futuristic-radio" type="radio" />
-                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
-                                    <i class="fa-solid fa-cart-shopping"></i>
+                                <div class="flex justify-center items-start w-1/2">
+                                    <i class="fa-regular fa-clock text-amber-400 me-4 text-xl"></i>
+                                    <div>
+                                        <h2>الوقت المقدر للتسليم</h2>
+                                        <p class="text-neutral-400">
+                                            1:30 - 2:15 PM
+                                        </p>
+                                    </div>
                                 </div>
-                            </label>
-                            <label class="relative flex items-center justify-around cursor-pointer">
-                                <span class="ml-2 text-black w-2/4">طبق صغير</span>
-                                <span class="ml-2 text-red-500 w-1/4" align="center">6,84$</span>
-                                <input class="sr-only peer" name="futuristic-radio" type="radio" />
-                                <div class="h-6 text-gray-300 peer-checked:text-amber-400  peer-checked:shadow-amber-500/50 transition duration-300 ease-in-out w-1/4" align="left">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </div>
-                            </label>
+                            </div>
+                            <div class="flex justify-between items-center w-2/3 p-5 m-3 rounded-full shadow-2xl">
+                                <span class="text-black text-lg font-medium">الفاتورة النهائية</span>
+                                <span class="text-red-500 text-lg font-bold">
+                                    <span class="total-price">0</span>$</span>
+                            </div>
+                            <div class="flex justify-between items-center w-2/3 p-5 m-3">
+                                <button class="flex justify-center items-center w-1/2 p-3 rounded-full bg-amber-100 hover:bg-amber-400 focus:bg-amber-400 transition-colors delay-200 ease-in me-4">
+                                    <i class="fa-regular fa-comments me-4"></i>
+                                    أرسل رسالة
+                                </button>
+                                <button class="flex justify-center items-center w-1/2 p-3 rounded-full bg-amber-400 hover:bg-amber-700 focus:bg-amber-700  transition-colors delay-200 ease-in">
+                                    <i class="fa-solid fa-phone-flip me-4"></i>
+                                    أتصل بنا
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center text-black font-medium">
+                            <span>مسار الطلب</span>
+                            <img src="asset/img/map.png" alt="">
+                            <span>سيتم التواصل معك لاستلام الطلب</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Modal footer -->
-                <div class="flex flex-shrink-0 flex-wrap items-center justify-around rounded-b-md border-t-2 border-neutral-100 p-4  dark:border-white/10">
-                    <div class="flex items-center justify-around w-3/4">
-                        <button class="flex items-center justify-between px-4 py-2 bg-amber-400  text-black  rounded-full hover:bg-amber-500  hover:text-white focus:bg-amber-500 focus:text-white">
-                            <span class="text-black font-medium text-base pe-2">إضافة الى سلة الشراء</span>
-                            <span class="text-red-600 font-bold text-base">6,84 $</span>
-                        </button>
-                        <div class="flex flex-row items-center justify-between ms-3">
-                            <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                            <span class="text-black font-bold text-base mx-2">1</span>
-                            <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+
+
+
+    <!-- ********* Notifications ********** -->
 
     <!--  empty notifications -->
     <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="notifications" tabindex="-1" aria-labelledby="notificationsTitle" aria-modal="true" role="dialog">
@@ -1843,6 +1944,10 @@
         </div>
     </div>
 
+
+
+    <!-- ********* Sidebar ********** -->
+
     <!-- Sidebar For (Profile,Settings,Logout) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="rightTopModal" tabindex="-1" aria-labelledby="rightTopModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -1912,7 +2017,6 @@
         </div>
     </div>
 
-
     <!-- Sidebar (Profile) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="ProfileModal" tabindex="-1" aria-labelledby="ProfileModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -1953,8 +2057,8 @@
                             }
                         </style>
                         <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
-                            <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="exampleInput123" aria-describedby="emailHelp123" placeholder="الاسم" dir="rtl" />
-                            <label for="exampleInput123" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                            <input type="text" name="first-name" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="first-name" aria-describedby="first-name" placeholder="الاسم" dir="rtl" />
+                            <label for="first-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
                                 الاسم الاول
                             </label>
                             <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
@@ -1962,8 +2066,8 @@
                             </span>
                         </div>
                         <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
-                            <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="exampleInput123" aria-describedby="emailHelp123" placeholder="الاسم" dir="rtl" />
-                            <label for="exampleInput123" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                            <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="last-name" aria-describedby="last-name" placeholder="الاسم" dir="rtl" />
+                            <label for="last-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
                                 الاسم الثاني
                             </label>
                             <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
@@ -1971,7 +2075,7 @@
                             </span>
                         </div>
                         <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
-                            <input type="email" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"aria-describedby="email" placeholder="البريد الإلكتروني" dir="rtl" />
+                            <input type="email" id="email" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="email" placeholder="البريد الإلكتروني" dir="rtl" />
                             <label for="email" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
                                 البريد الإلكتروني
                             </label>
@@ -1980,8 +2084,8 @@
                             </span>
                         </div>
                         <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
-                            <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"aria-describedby="email" placeholder="البريد الإلكتروني" dir="rtl" />
-                            <label for="email" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                            <input type="text" id="phone" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="phone" placeholder="رقم الهاتف" dir="rtl" />
+                            <label for="phone" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
                                 رقم الهاتف
                             </label>
                             <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
@@ -2118,7 +2222,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Sidebar For (bills) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="BillsModal" tabindex="-1" aria-labelledby="BillsModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -2201,7 +2305,7 @@
             </div>
         </div>
     </div>
-        
+
     <!-- Sidebar For (Logout) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="LogoutModal" tabindex="-1" aria-labelledby="LogoutModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
@@ -2229,18 +2333,20 @@
             </div>
         </div>
     </div>
-        
 
+    <!-- End Modal -->
 
     <!-- Scripts -->
     <script src="asset/js/plugins/tw-elements.umd.min.js"></script>
     <script type="module" src="asset/js/tailwind.js"></script>
     <script src="asset/js/plugins/jquery-3.7.1.min.js"></script>
+    <script src="asset/js/cart.js"></script>
     <script src="asset/js/main.js"></script>
+    
 
 
     <!-- for this page -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="asset/js/plugins/swiper-bundle.min.js"></script>
     <script>
 
         function colseModal(id) {

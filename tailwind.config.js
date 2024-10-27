@@ -5,6 +5,7 @@ module.exports = {
     './index.html',
     './login.html',
     './register.html',
+    './edit.html',
     './asset/js/**/*.js',
     './node_modules/tw-elements/dist/js/**/*.js',
   ],
@@ -15,6 +16,7 @@ module.exports = {
       },
       width: {
         90: '90%',
+        '1/2' : '50%',
       },
       colors: {
         amber: {
