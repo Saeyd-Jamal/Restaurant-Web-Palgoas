@@ -3,8 +3,6 @@ module.exports = {
   darkMode: 'class',
   content: [
     './index.html',
-    './login.html',
-    './register.html',
     './edit.html',
     './asset/js/**/*.js',
     './node_modules/tw-elements/dist/js/**/*.js',
