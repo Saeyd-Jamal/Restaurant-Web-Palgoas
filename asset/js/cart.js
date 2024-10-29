@@ -83,6 +83,8 @@ $(document).ready(function() {
             $('.emptyCart').show();
             $('.fullCart').hide();
             $('#cartAlart').slideUp();
+
+            
         } else {
             $('.emptyCart').hide();
             $('.fullCart').show();
