@@ -41,6 +41,7 @@ $(document).ready(function() {
         let quantity = parseInt($(`#quantity-${productId}`).text());   // الحصول على الكمية المختارة
         let price = parseFloat($(`input[name=size-${productId}]:checked`).data('price')); // الحصول على السعر
 
+        $('#cartAlart').slideDown();
 
         // إضافة العنصر إلى السلة
         addToCart(productId, name, size, quantity, price);
@@ -81,6 +82,7 @@ $(document).ready(function() {
         if (cart.length === 0) {
             $('.emptyCart').show();
             $('.fullCart').hide();
+            $('#cartAlart').slideUp();
         } else {
             $('.emptyCart').hide();
             $('.fullCart').show();
@@ -120,6 +122,7 @@ $(document).ready(function() {
                     </div>
                 `);
             });
+            
 
             $('.total-price').text(total);
             $('.total-quantity').text(totalQuantity);
