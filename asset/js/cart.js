@@ -99,19 +99,19 @@ $(document).ready(function() {
                 totalQuantity += item.quantity;
 
                 $('.cart-items').append(`
-                    <div class="cart-item flex items-baseline justify-between my-2 p-2 border-2 border-neutral-300 shadow-4 rounded-lg" data-index="${index}">
+                    <div class="cart-item flex items-end justify-between my-2 p-2 border-2 border-neutral-300 shadow-4 rounded-lg" data-index="${index}">
                         <div class="flex item-center justify-start">
                             <img src="asset/img/cart-02.png" alt="cart-01" class="rounded-lg	">
                             <div class="flex flex-col justify-between items-start ms-3">
-                                <h4 class="text-xl font-bold text-black">${item.name} - <span>${item.size}</span></h4> 
-                                <span class="text-red-500">السعر: ${itemTotal}$</span>
+                                <h4 class="text-base font-bold text-black">${item.name} - <span>${item.size}</span></h4> 
+                                <span class="text-red-500 font-bold">${itemTotal}$</span>
                                 <div class="flex flex-row items-center justify-between">
-                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200 calc-quantity-cart" data-type="minus" data-product-id="${item.productId}"  data-index="${index}">
-                                        <i class="fa-solid fa-minus"></i>
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-black font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200 calc-quantity-cart" data-type="plus" data-product-id="${item.productId}"  data-index="${index}">
+                                        <i class="fa-solid fa-plus"></i>
                                     </button>
                                     <span class="text-black font-bold text-base mx-2" id="quantity-cart-${index}">${item.quantity}</span>
-                                    <button class="bg-amber-400 hover:bg-amber-700 text-white font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200 calc-quantity-cart" data-type="plus" data-product-id="${item.productId}"  data-index="${index}">
-                                        <i class="fa-solid fa-plus"></i>
+                                    <button class="bg-amber-400 hover:bg-amber-700 text-black font-bold w-5 h-5 p-4 rounded-full flex items-center justify-center transition ease-in duration-200 calc-quantity-cart" data-type="minus" data-product-id="${item.productId}"  data-index="${index}">
+                                        <i class="fa-solid fa-minus"></i>
                                     </button>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ $(document).ready(function() {
             const itemTotal = item.price * item.quantity;
             $('#cartInsideItems').append(`
                 <div class="w-full flex items-center justify-center mt-3 p-3 shadow-md text-black rounded-full">
-                    ${item.name} - ${item.size} - ${item.quantity}
+                    ${item.quantity}  ${item.name} - ${item.size} -
                 </div>
             `);
         });

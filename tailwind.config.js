@@ -3,7 +3,11 @@ module.exports = {
   darkMode: 'class',
   content: [
     './index.html',
-    './edit.html',
+    './about.html',
+    './conect.html',
+    './restaurant_address.html',
+    './course_demand.html',
+    './wait.html',
     './asset/js/**/*.js',
     './node_modules/tw-elements/dist/js/**/*.js',
   ],
@@ -17,6 +21,10 @@ module.exports = {
         '1/2' : '50%',
       },
       colors: {
+        sacndary : {
+          DEFAULT: '#A6A4A4',
+          200: '#d3d1d1',
+        },
         amber: {
           400: '#FFC700',
         },

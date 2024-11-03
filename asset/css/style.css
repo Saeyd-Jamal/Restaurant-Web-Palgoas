@@ -66,6 +66,7 @@ body {
 .slide img {
     width: 100%;
     height: 100vh;
+    object-fit: cover;
 }
 
 /* End Header */
@@ -95,5 +96,27 @@ body {
 
 .swiper-pagination-bullet {
     background: #4f46e5;
+}
+.swiper-button-next {
+    right: -70px; 
+    top: 44%; 
+    color:black !important;
+}
+.swiper-button-prev {
+    left: -70px; 
+    top: 44%; 
+    color:black !important;
+}
+@media(max-width: 768px) {
+    .swiper-button-prev{
+        left: 80px;
+        bottom: -8px;
+        top: auto;
+    }
+    .swiper-button-next{
+        right: 80px;
+        top: auto;
+        bottom: -8px;
+    }
 }
 /* End Product Slider */
