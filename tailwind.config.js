@@ -18,6 +18,7 @@ module.exports = {
       },
       width: {
         90: '90%',
+        50: '200px',
         '1/2' : '50%',
       },
       colors: {

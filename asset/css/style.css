@@ -120,3 +120,16 @@ body {
     }
 }
 /* End Product Slider */
+
+
+/* edit input in forms */
+[data-twe-input-notch-ref] {
+    direction: rtl;
+}
+[data-twe-input-notch-leading-ref]
+{
+    border-radius: 0 30px 30px 0;
+}
+[data-twe-input-notch-trailing-ref]{
+    border-radius: 25px 0 0 25px;
+}

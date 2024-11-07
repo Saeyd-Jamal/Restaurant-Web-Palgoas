@@ -28,7 +28,7 @@
 
 <body class="min-h-screen relative">
     <!-- Header -->
-    <header class="relative w-full py-2" style="background-color: #1a1a1a">
+    <header class="relative w-full pt-2 pb-10" style="background-color: #1a1a1a">
         <nav class="w-full flex flex-col items-center justify-between text-white z-50 ">
             <div class="container flex w-90 items-center justify-between py-2 px-3 lg:py-4">
                 <div class="flex items-center">
@@ -254,6 +254,7 @@
         </nav>
     </header>
 
+
     <section class="container mx-auto mt-5 w-90 relative flex justify-center">
         <div class="card__content w-full h-full flex flex-col justify-center items-center" style="margin-top: 100px">
             <div class="card__title">
@@ -338,15 +339,15 @@
                     <li class="w-full py-4 text-black font-bold text-lg">
                         معلومات التواصل
                     </li>
-                    <li class="w-full flex hover:text-amber-500 hover:ps-2 transition-all delay-150 ease-in mb-2">
+                    <li class="w-full flex items-center text-base hover:text-amber-500 hover:ps-2 transition-all delay-150 ease-in mb-2">
                         <i class="fa-solid fa-location-dot me-2 text-sacndary"></i>
                         <a href="#" class=" transition-color duration-200 ease-in">العنوان</a>
                     </li>
-                    <li class="w-full flex hover:text-amber-500 hover:ps-2 transition-all delay-150 ease-in mb-2">
-                        <i class="fa-solid fa-phone me-2 text-sacndary"></i>
+                    <li class="w-full flex items-center text-base hover:text-amber-500 hover:ps-2 transition-all delay-150 ease-in mb-2">
+                        <i class="fa-solid fa-phone me-2 text-sacndary" style="rotate: 260deg"></i>
                         <a href="tel:0123456789" class="transition-color duration-200 ease-in">0123456789</a>
                     </li>
-                    <li class="w-full flex hover:text-amber-500 hover:ps-2 transition-all delay-150 ease-in mb-2">
+                    <li class="w-full flex items-center text-base hover:text-amber-500 hover:ps-2 transition-all delay-150 ease-in mb-2">
                         <i class="fa-brands fa-whatsapp me-2 text-sacndary"></i>
                         <a href="#" class="transition-color duration-200 ease-in">تواصل واتس</a>
                     </li>
@@ -389,6 +390,7 @@
     </footer>
 
 
+
     <!-- صفحة مهمة عند فتح بعض الحركات -->
     <div id="fullScreen" class="absolute top-0 left-0 bg-black/50 w-full h-full hidden" style="z-index: 1000;">
     </div>
@@ -396,6 +398,7 @@
 
 
 
+    
     
     <!-- Start Modals -->
 
@@ -564,12 +567,28 @@
                         <h3 class="font-bold text-lg" id="name-product-1">وجبة مشاوي مشكلة</h3>
                         <p>شوربة تحتوي على الجزر و البطاطا  و قطع الدجاج</p>
                     </div>
+                    <!-- Close button -->
+                    <button type="button" class="absolute top-4 right-4 z-10 box-content rounded-none border-none text-white hover:text-neutral-800 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-300 dark:focus:text-neutral-300" data-twe-modal-dismiss aria-label="Close">
+                        <span class="[&>svg]:h-6 [&>svg]:w-6">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </span>
+                    </button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="relative px-4 py-4">
-                    <div class="flex items-center justify-center p-5">
-                        <div class="flex border-2 border-amber-400 w-3/4 shadow-lg rounded-lg">
+                    <div class="flex items-center justify-center p-2">
+                        <div class="flex border-2 border-amber-400 w-full shadow-lg rounded-lg">
                             <textarea name="note" class="w-full  bg-white p-2 text-base font-medium outline-0 rounded-r-full" id=""  placeholder="لديك ملاحظات إضافية؟" rows="2"></textarea>
                             <input type="button" value="حفظ" class="bg-amber-400 py-2 px-4 rounded-lg text-black text-sm font-semibold hover:bg-amber-800 transition-colors cursor-pointer">
                         </div>
@@ -788,32 +807,18 @@
                         <div class="card__title">
                             <h1 class="text-3xl font-bold text-center">تسجيل الدخول</h1>
                         </div>
-                        <div class="card__form p-4 w-2/4">
+                        <div class="card__form p-4 w-1/3 mt-10">
                             <form>
-                                <style>
-                                    [data-twe-input-notch-ref] {
-                                        direction: rtl;
-                                    }
-                                    [data-twe-input-notch-leading-ref]
-                                    {
-                                        border-radius: 0 30px 30px 0;
-                                    }
-                                    [data-twe-input-notch-trailing-ref]{
-                                        border-radius: 25px 0 0 25px;
-                                    }
-                                    .relative .border {
-                                        border-color: rgb(251 191 36) /* #fbbf24 */;
-                                    }
-                                </style>
-                                <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
-                                    <input type="email" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"aria-describedby="email" placeholder="البريد الإلكتروني" dir="rtl" />
-                                    <label for="email" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                                <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
+                                    <input type="text" name="first-name" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="first-name" aria-describedby="first-name" placeholder="الاسم" dir="rtl" />
+                                    <label for="first-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
                                         البريد الإلكتروني
                                     </label>
                                     <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
-                                        <i class="fa-solid fa-at text-neutral-500"></i>
+                                        <i class="fa-solid fa-envelope text-neutral-500"></i>
                                     </span>
                                 </div>
+
                                 <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
                                     <input type="password" id="passwordsss" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="password" placeholder="كلمة المرور" dir="rtl" />
                                     <label for="password" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
@@ -873,23 +878,8 @@
                         <div class="card__title">
                             <h1 class="text-3xl font-bold text-center">تسجيل جديد</h1>
                         </div>
-                        <div class="card__form p-4 w-2/4">
+                        <div class="card__form p-4 w-1/3">
                             <form>
-                                <style>
-                                    [data-twe-input-notch-ref] {
-                                        direction: rtl;
-                                    }
-                                    [data-twe-input-notch-leading-ref]
-                                    {
-                                        border-radius: 0 30px 30px 0;
-                                    }
-                                    [data-twe-input-notch-trailing-ref]{
-                                        border-radius: 25px 0 0 25px;
-                                    }
-                                    .relative .border {
-                                        border-color: rgb(251 191 36) /* #fbbf24 */;
-                                    }
-                                </style>
                                 <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
                                     <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="exampleInput123" aria-describedby="emailHelp123" placeholder="الاسم" dir="rtl" />
                                     <label for="exampleInput123" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
@@ -1132,17 +1122,13 @@
                         </div>
                         <i class="fa-solid fa-arrow-left"></i>
                     </button>
-                    <button class="flex items-center text-black justify-between py-2 w-3/4 hover:ps-3 hover:text-neutral-400 transition-all duration-300 ease-in-out border-b-2 border-neutral-300"
-                    data-twe-toggle="modal"
-                    data-twe-target="#BillsModal"
-                    data-twe-ripple-init
-                    data-twe-ripple-color="light">
+                    <a href="./bills.html" class="flex items-center text-black justify-between py-2 w-3/4 hover:ps-3 hover:text-neutral-400 transition-all duration-300 ease-in-out border-b-2 border-neutral-300">
                         <div class="flex items-center">
                             <i class="fa-solid fa-file-invoice-dollar pe-2"></i>
                             <span class="text-xl font-bold ">فواتيري</span>
                         </div>
                         <i class="fa-solid fa-arrow-left"></i>
-                    </button>
+                    </a>
                     <button class="flex items-center text-black justify-between py-2 w-3/4 hover:ps-3 hover:text-neutral-400 transition-all duration-300 ease-in-out"
                     data-twe-toggle="modal"
                     data-twe-target="#LogoutModal"
@@ -1161,88 +1147,74 @@
         </div>
     </div>
 
+
     <!-- Sidebar (Profile) -->
     <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="ProfileModal" tabindex="-1" aria-labelledby="ProfileModalLabel" style="display: none;" aria-hidden="true">
         <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
             <div class="pointer-events-auto relative flex w-full h-screen flex-col border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
-            <div class="flex flex-shrink-0 items-center justify-between  p-4 dark:border-b dark:border-white/10">
-                <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-300 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:focus:text-neutral-300" data-twe-modal-dismiss="" aria-label="Close">
-                <span class="[&amp;>svg]:h-6 [&amp;>svg]:w-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </span>
-                </button>
-            </div>
-            <div class="relative" data-twe-modal-body-ref="">
-                <div class="relative flex items-center justify-center my-3 ">
-                    <div class="w-1/4">
-                        <img src="asset/img/profile.png" alt="" class="w-full">
-                    </div>
-                    <button>
-                        <i class="fa-solid fa-pen-to-square text-xl w-10 h-10 text-black bg-amber-400 rounded-full border-2 border-solid border-neutral-400 hover:border-amber-400 hover:text-amber-800 transition-all duration-200 ease-in absolute bottom-[-10px] right-[37%] flex items-center justify-center"></i>
+                <div class="flex flex-shrink-0 items-center justify-between  p-4 dark:border-b dark:border-white/10">
+                    <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-300 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:focus:text-neutral-300" data-twe-modal-dismiss="" aria-label="Close">
+                    <span class="[&amp;>svg]:h-6 [&amp;>svg]:w-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </span>
                     </button>
-                </div> 
-                <div class="flex flex-col items-center justify-center mt-28">
-                    <form class="flex flex-col items-center justify-center">
-                        <style>
-                            [data-twe-input-notch-ref] {
-                                direction: rtl;
-                            }
-                            [data-twe-input-notch-leading-ref]
-                            {
-                                border-radius: 0 30px 30px 0;
-                            }
-                            [data-twe-input-notch-trailing-ref]{
-                                border-radius: 25px 0 0 25px;
-                            }
-                            .relative .border {
-                                border-color: rgb(251 191 36) /* #fbbf24 */;
-                            }
-                        </style>
-                        <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
-                            <input type="text" name="first-name" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="first-name" aria-describedby="first-name" placeholder="الاسم" dir="rtl" />
-                            <label for="first-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                                الاسم الاول
-                            </label>
-                            <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
-                                <i class="fa-regular fa-user text-neutral-500"></i>
-                            </span>
-                        </div>
-                        <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
-                            <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="last-name" aria-describedby="last-name" placeholder="الاسم" dir="rtl" />
-                            <label for="last-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                                الاسم الثاني
-                            </label>
-                            <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
-                                <i class="fa-regular fa-user text-neutral-500"></i>
-                            </span>
-                        </div>
-                        <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
-                            <input type="email" id="email" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="email" placeholder="البريد الإلكتروني" dir="rtl" />
-                            <label for="email" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                                البريد الإلكتروني
-                            </label>
-                            <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
-                                <i class="fa-solid fa-envelope text-neutral-500"></i>
-                            </span>
-                        </div>
-                        <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
-                            <input type="text" id="phone" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="phone" placeholder="رقم الهاتف" dir="rtl" />
-                            <label for="phone" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
-                                رقم الهاتف
-                            </label>
-                            <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
-                                <i class="fa-solid fa-phone text-neutral-500"></i>
-                            </span>
-                        </div>
-                        <!--Submit button-->
-                        <button type="submit" class="inline-block w-2/4 rounded-lg bg-amber-400 px-6 py-2 text-xl font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong" data-twe-ripple-init data-twe-ripple-color="light">
-                            حفظ
-                        </button>
-                    </form>
                 </div>
-            </div>
+                <div class="relative" data-twe-modal-body-ref="">
+                    <div class="relative flex items-center justify-center my-3 ">
+                        <div class="w-1/4">
+                            <img src="asset/img/profile.png" alt="" class="w-full">
+                        </div>
+                        <button>
+                            <i class="fa-solid fa-pen-to-square text-xl w-10 h-10 text-black bg-amber-400 rounded-full border-2 border-solid border-neutral-400 hover:border-amber-400 hover:text-amber-800 transition-all duration-200 ease-in absolute bottom-[-10px] right-[37%] flex items-center justify-center"></i>
+                        </button>
+                    </div> 
+                    <div class="flex flex-col items-center justify-center mt-28">
+                        <form class="flex flex-col items-center justify-center">
+                            <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
+                                <input type="text" name="first-name" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="first-name" aria-describedby="first-name" placeholder="الاسم" dir="rtl" />
+                                <label for="first-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                                    الاسم الاول
+                                </label>
+                                <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
+                                    <i class="fa-regular fa-user text-neutral-500"></i>
+                                </span>
+                            </div>
+                            <div class="relative mb-4 flex flex-wrap items-stretch rounded-lg border-amber-400" data-twe-input-wrapper-init>
+                                <input type="text" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" id="last-name" aria-describedby="last-name" placeholder="الاسم" dir="rtl" />
+                                <label for="last-name" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                                    الاسم الثاني
+                                </label>
+                                <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
+                                    <i class="fa-regular fa-user text-neutral-500"></i>
+                                </span>
+                            </div>
+                            <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
+                                <input type="email" id="email" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="email" placeholder="البريد الإلكتروني" dir="rtl" />
+                                <label for="email" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                                    البريد الإلكتروني
+                                </label>
+                                <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
+                                    <i class="fa-solid fa-envelope text-neutral-500"></i>
+                                </span>
+                            </div>
+                            <div class="relative mb-4 flex flex-wrap items-stretch" data-twe-input-wrapper-init>
+                                <input type="text" id="phone" class="peer block min-h-[auto] flex-auto rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0" aria-describedby="phone" placeholder="رقم الهاتف" dir="rtl" />
+                                <label for="phone" class="pointer-events-none absolute right-2 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-300 dark:peer-focus:text-primary">
+                                    رقم الهاتف
+                                </label>
+                                <span class="flex items-center whitespace-nowrap rounded-e  px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-surface dark:text-white" id="basic-addon2" >
+                                    <i class="fa-solid fa-phone text-neutral-500"></i>
+                                </span>
+                            </div>
+                            <!--Submit button-->
+                            <button type="submit" class="inline-block w-2/4 rounded-lg bg-amber-400 px-6 py-2 text-xl font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong" data-twe-ripple-init data-twe-ripple-color="light">
+                                حفظ
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1281,16 +1253,19 @@
                             aria-labelledby="languageChange" data-twe-dropdown-menu-ref>
                             <label class="relative flex items-center justify-between cursor-pointer m-2">
                                 العربية
-                                <input type="radio" name="langM" value="ar" checked class="sr-only peer">
-                                <div class="group peer ring-0  bg-gradient-to-bl from-neutral-800 via-neutral-700 to-neutral-600  rounded-full outline-none duration-1000 after:duration-300 w-24 h-12  shadow-md  peer-focus:outline-none  after:content-[''] after:rounded-full after:absolute after:[background:#0D2B39]   peer-checked:after:rotate-180 after:[background:conic-gradient(from_135deg,_#b2a9a9,_#b2a8a8,_#ffffff,_#d7dbd9_,_#ffffff,_#b2a8a8)]  after:outline-none after:h-10 after:w-10 after:top-1 after:left-1   peer-checked:after:translate-x-12 peer-hover:after:scale-95 peer-checked:bg-gradient-to-r peer-checked:from-amber-500 peer-checked:to-amber-400">
-                                </div>
+                                <input type="checkbox" class="sr-only peer" value="" checked />
+                                <div
+                                    class="group peer bg-white rounded-full duration-300 w-16 h-8 ring-2 ring-red-500 after:duration-300 after:bg-red-500 peer-checked:after:bg-green-500 peer-checked:ring-green-500 after:rounded-full after:absolute after:h-6 after:w-6 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-checked:after:translate-x-8 peer-hover:after:scale-95"
+                                ></div>
                             </label>
                             <label class="relative flex items-center justify-between cursor-pointer m-2">
                                 الإنجليزية
-                                <input type="radio" name="langM" value="en" class="sr-only peer">
-                                <div class="group peer ring-0  bg-gradient-to-bl from-neutral-800 via-neutral-700 to-neutral-600  rounded-full outline-none duration-1000 after:duration-300 w-24 h-12  shadow-md  peer-focus:outline-none  after:content-[''] after:rounded-full after:absolute after:[background:#0D2B39]   peer-checked:after:rotate-180 after:[background:conic-gradient(from_135deg,_#b2a9a9,_#b2a8a8,_#ffffff,_#d7dbd9_,_#ffffff,_#b2a8a8)]  after:outline-none after:h-10 after:w-10 after:top-1 after:left-1   peer-checked:after:translate-x-12 peer-hover:after:scale-95 peer-checked:bg-gradient-to-r peer-checked:from-amber-500 peer-checked:to-amber-400">
-                                </div>
+                                <input type="checkbox" class="sr-only peer" value="" />
+                                <div
+                                    class="group peer bg-white rounded-full duration-300 w-16 h-8 ring-2 ring-red-500 after:duration-300 after:bg-red-500 peer-checked:after:bg-green-500 peer-checked:ring-green-500 after:rounded-full after:absolute after:h-6 after:w-6 after:top-1 after:left-1 after:flex after:justify-center after:items-center peer-checked:after:translate-x-8 peer-hover:after:scale-95"
+                                ></div>
                             </label>
+
                         </ul>
                     </div>
                     <a href="./about.html" class="flex items-center text-black justify-between py-2 w-3/4 hover:ps-3 hover:text-neutral-400 transition-all duration-300 ease-in-out  border-b-2 border-neutral-300">
@@ -1363,89 +1338,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sidebar For (bills) -->
-    <div data-twe-modal-init="" class="fixed left-0 top-0 z-[1055] h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="BillsModal" tabindex="-1" aria-labelledby="BillsModalLabel" style="display: none;" aria-hidden="true">
-        <div data-twe-modal-dialog-ref="" class="pointer-events-none absolute right-0 h-screen w-full translate-x-full transition-all duration-300 ease-in-out max-[576px]:right-auto  min-[576px]:max-w-[450px] opacity-0">
-            <div class="pointer-events-auto relative flex w-full h-screen flex-col border-none bg-white bg-clip-padding text-current shadow-4 outline-none dark:bg-surface-dark">
-            <div class="flex flex-shrink-0 items-center justify-between  p-4 dark:border-b dark:border-white/10">
-                <button type="button" class="box-content rounded-none border-none text-neutral-500 hover:text-neutral-300 hover:no-underline focus:text-neutral-800 focus:opacity-100 focus:shadow-none focus:outline-none dark:focus:text-neutral-300" data-twe-modal-dismiss="" aria-label="Close">
-                <span class="[&amp;>svg]:h-6 [&amp;>svg]:w-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </span>
-                </button>
-            </div>
-            <div class="relative" data-twe-modal-body-ref="">
-                <div class="flex flex-col items-center justify-center my-3 border-b-2 border-neutral-300">
-                    <h2 class="text-3xl font-bold my-5 text-black">فواتيري</h2>
-                    <img src="asset/img/logoD.png" alt="" class="w-1/4 mb-2">
-                </div> 
-                <div class="flex flex-col items-center justify-center mt-10">
-                    <div class="bg-[#eeeded3d] w-3/4 rounded-lg shadow-lg py-4 px-2">
-                        <div class="card__content">
-                            <div class="flex justify-between w-2/4 p-2 rounded-full bg-gray-300">
-                                <span class="text-gray-500 font-bold">2:54 PM</span>
-                                <span class="text-gray-500 font-bold">8/8/2024</span>
-                            </div>
-                            <ul class="w-full text-surface dark:text-white">
-                                <li class="flex justify-between items-center w-full border-b-2 border-neutral-100 py-4  hover:ps-2 transition-all delay-150 ease-in">
-                                    <span class="text-black text-base font-normal w-1/3">وجبة الملكي</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="center">1</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="left">$15</span>
-                                </li>
-                                <li class="flex justify-between items-center w-full border-b-2 border-neutral-100 py-4  hover:ps-2 transition-all delay-150 ease-in">
-                                    <span class="text-black text-base font-normal w-1/3">بيتزا</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="center">2</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="left">$15</span>
-                                </li>
-                                <li class="flex justify-between items-center w-full border-b-2 border-neutral-100 py-4  hover:ps-2 transition-all delay-150 ease-in">
-                                    <span class="text-black text-base font-normal w-1/3">مشروبات</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="center">3</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="left">$15</span>
-                                </li>
-                            </ul>
-                            <div class="flex justify-between w-full p-4">
-                                <span class="font-bold text-black text-lg">المجموع</span>
-                                <span class="font-bold text-red-600 text-xl p-3 bg-white">$157</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-[#eeeded3d] w-3/4 rounded-lg shadow-lg py-4 px-2">
-                        <div class="card__content">
-                            <div class="flex justify-between w-2/4 p-2 rounded-full bg-gray-300">
-                                <span class="text-gray-500 font-bold">2:54 PM</span>
-                                <span class="text-gray-500 font-bold">8/8/2024</span>
-                            </div>
-                            <ul class="w-full text-surface dark:text-white">
-                                <li class="flex justify-between items-center w-full border-b-2 border-neutral-100 py-4  hover:ps-2 transition-all delay-150 ease-in">
-                                    <span class="text-black text-base font-normal w-1/3">وجبة الملكي</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="center">1</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="left">$15</span>
-                                </li>
-                                <li class="flex justify-between items-center w-full border-b-2 border-neutral-100 py-4  hover:ps-2 transition-all delay-150 ease-in">
-                                    <span class="text-black text-base font-normal w-1/3">بيتزا</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="center">2</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="left">$15</span>
-                                </li>
-                                <li class="flex justify-between items-center w-full border-b-2 border-neutral-100 py-4  hover:ps-2 transition-all delay-150 ease-in">
-                                    <span class="text-black text-base font-normal w-1/3">مشروبات</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="center">3</span>
-                                    <span class="text-black text-base font-normal w-1/3" align="left">$15</span>
-                                </li>
-                            </ul>
-                            <div class="flex justify-between w-full p-4">
-                                <span class="font-bold text-black text-lg">المجموع</span>
-                                <span class="font-bold text-red-600 text-xl p-3 bg-white">$157</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
         </div>
     </div>
